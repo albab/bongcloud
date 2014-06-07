@@ -6,12 +6,14 @@ public class Piece {
 
 	private String position;
 	
+	protected int weight;
+	
 	public void setupPosition(String position) {
 		this.position = position;
 	}
 	
-	public void setWhite(boolean white) {
-		this.white = white;
+	public void setBlack(boolean black) {
+		this.black = black;
 	}
 	
 	public String getPosition() {
