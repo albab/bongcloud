@@ -10,9 +10,13 @@ public class BongCloud {
 	public static String currentLocation = null;
 	public static String newLocation = null;
 	public static boolean whiteTurn = true;
+	public static int blackTally, whiteTally;
 	
 	public static void main(String[] args) {
 		System.out.println("\n\nbongcloud\n\n");
+		
+		blackTally = 0;
+		whiteTally = 0;
 		
 		//init game
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,9 +32,11 @@ public class BongCloud {
 		    
 		     try {
 		    	 
-		    	 if (whiteTurn){		
+		    	 if (whiteTurn){
+				System.out.println("W:" + whiteTally + " B:" + blackTally);		
 		    			System.out.println("White's turn:");	
 		    	 } else {
+				System.out.println("W:" + whiteTally + " B:" + blackTally);
 		    		 System.out.println("Black's turn:");
 		    	 }
 

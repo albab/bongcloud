@@ -5,7 +5,7 @@ public class Board {
 	Piece[][] board;
 		
 	public Board(){
-		//Testing with an entire board first
+		//Half a chess board
 		board = new Piece[4][8];
 		initializeBoard();		
 	}
