@@ -11,9 +11,12 @@ public class BongCloud {
 	public static String newLocation = null;
 	public static boolean whiteTurn = true;
 	public static int blackTally, whiteTally;
+	public static String lastMove;
 	
 	public static void main(String[] args) {
 		System.out.println("\n\nbongcloud\n\n");
+		
+		lastMove = "";
 		
 		blackTally = 0;
 		whiteTally = 0;
@@ -33,17 +36,17 @@ public class BongCloud {
 		     try {
 		    	 
 		    	 if (whiteTurn){
+				System.out.println("Last move: " + lastMove);
 				System.out.println("W:" + whiteTally + " B:" + blackTally);		
 		    			System.out.println("White's turn:");	
 		    	 } else {
 				System.out.println("W:" + whiteTally + " B:" + blackTally);
 		    		 System.out.println("Black's turn:");
 		    	 }
-
 	
 			input = br.readLine();
 			parseInput(input);
-	
+			
 		    	drawBoard();
 		    
 		    	 
@@ -103,10 +106,13 @@ public class BongCloud {
 	
 	public static void parseInput(String input) {
 		StringTokenizer st = null;
-		int count = 0;
 		input = input.toLowerCase();
 		input = input.trim(); 
 		st = new StringTokenizer(input);
-		 
+		String oldFileLetter = input.substring(0,0);
+		String oldRankNumber = input.substring(1,1);
+		String newFileLetter = input.substring(3,3);
+		String newRankNumber = input.substring(4,4);
+		lastMove = input;
 	}
 }
