@@ -40,6 +40,7 @@ public class BongCloud {
 				System.out.println("W:" + whiteTally + " B:" + blackTally);		
 		    			System.out.println("White's turn:");	
 		    	 } else {
+				System.out.println("Last move: " + lastMove);
 				System.out.println("W:" + whiteTally + " B:" + blackTally);
 		    		 System.out.println("Black's turn:");
 		    	 }
